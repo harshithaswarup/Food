@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+{% block content %}
+<head>
+  <script type="text/javascript">
+    function validate(){
+      var x = document.forms["myform"]["fname"].value;
+      if (x == ""){
+        alert("You are required to fill the AREA..");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="w3-sidebar w3-black w3-bar-block" style="width:25%">
+    <a href=""><p><b><font size="7">&#8498;&#8370;&#9832;</font></b></p></a>
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="w3-bar-item w3-button">&#9889;Offers<span class="w3-badge w3-green">6</span></a>
+  <a href="" class="w3-bar-item w3-button">&#10032;Most Recommended</a>
+  <a href="" class="w3-bar-item w3-button">&#9889;&#9889;Fast Delivery</a>
+  <a href="" class="w3-bar-item w3-button">&#9719;Express Delivery</a>
+  <a href="#" class="w3-bar-item w3-button">&#9881;Help</a>
+  <a href="" class="w3-bar-item w3-button">&#10070;Terms and Conditions</a>
+</div>
+
+<div style="margin-left:25%">
+  <div class="w3-container w3-teal">
+</div>
+<script>
+
+    $(document).ready(function(){
+        $('#search').click(function(){
+            window.location.href = "/foods/hotel/";
+        });
+    });
+</script>
+<div class="navbar">
+    <a href="/home/">Home</a>
+    <a href="/status/"><p>&#9832;Cart</p></a>
+    <a href="">
+    Welcome <p><strong>{{username}}</strong></p>
+    </a>
+</div>
+  <p class="solid">
+  <center><p><b><font color="green">Welcome To Food Gawker..!!</font></b></p></center>
+  <p><b>Enter The Area Of Delivery:</b></p>
+</div>
+  <form name="myform" onsubmit="validate()" method="POST">
+    {% csrf_token %}
+    <input type="text" name="fname">
+    <input type="submit" name="Submit" id="search" onclick="return validate()">
+  </form>
+</body>
+{% endblock %}
+</html>

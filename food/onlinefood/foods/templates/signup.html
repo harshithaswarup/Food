@@ -1,0 +1,56 @@
+{% extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+  {% block content %}
+  <script>
+    $(document).ready(function(){
+        $('#signin').click(function(){
+            window.location.href = "/foods/login/";
+        });
+    });
+
+</script>
+<div>
+  <div class="navbar">
+    <a href=""><p><b><font size="7">&#8498;&#8370;&#9832;</font></b></p></a>
+    <a href="/home/">Home</a>
+  </div>
+    <center><h1>Sign In</h1></center>
+  <div class="container">
+  <form action="" method="POST">
+    <center>
+    {% csrf_token %}
+    {{form.as_p}}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <p><font color="red">&#9888;{{ message}}</font></p>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  </center>
+  <div class="container">
+    <button type="button" class="btn btn-primary" color="green" data-toggle="modal" data-target="#myModal">Submit</button>
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <b><font color="green">You Have Signed In Successfully..!</font></b>
+          <div class="container">
+      <div class="progress">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div><br>
+      </div>
+        </div>
+      <div class="modal-footer">
+          <class="btn btn-success"><a href="/login/"><center><button>Continue</button></center></button>
+        </div>
+  </form>
+  {% endblock %}
+</div>
+</div>
+
+</body>
+</html>
+

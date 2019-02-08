@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+  {% block content %}
+  <script>
+    $(document).ready(function(){
+        $('#signin').click(function(){
+            window.location.href = "/foods/select/";
+        });
+    });
+
+</script>
+<div>
+  <div class="navbar">
+    <a href=""><p><b><font size="7">&#8498;&#8370;&#9832;</font></b></p></a>
+    <a href="/home/">Home</a>
+  </div>
+    <center><h1>Sign In</h1></center>
+  <div class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <center>
+    {{form.as_p}}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <p><font color="red">&#9888;{{ message}}</font></p>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  </center>
+  <center>
+    <div class="submit-button">
+      <input type="submit" id="signin" value="Sign In" onclick="select()">
+  </center>
+  </form>
+  {% endblock %}
+</div>
+</div>
+
+</body>
+</html>
+

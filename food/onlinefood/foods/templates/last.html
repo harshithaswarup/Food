@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <html lang="en">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <script src="{% static 'jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'popper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'bootstrap.min.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
+<body>
+  {% block content %}
+  <div class="w3-sidebar w3-black w3-bar-block" style="width:25%">
+    <a href=""><p><b><font size="7">&#8498;&#8370;&#9832;</font></b></p></a>
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="w3-bar-item w3-button">&#9889;Offers<span class="w3-badge w3-green">6</span></a>
+  <a href="" class="w3-bar-item w3-button">&#10032;Most Recommended</a>
+  <a href="" class="w3-bar-item w3-button">&#9889;&#9889;Fast Delivery</a>
+  <a href="" class="w3-bar-item w3-button">&#9719;Express Delivery</a>
+  <a href="#" class="w3-bar-item w3-button">&#9881;Help</a>
+  <a href="" class="w3-bar-item w3-button">&#10070;Terms and Conditions</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+  <div class="w3-container w3-teal">
+</div>
+<body>
+  <div class="navbar">
+    <a href="/home/">Home</a>
+    <a href="/home/">SignOut</a>
+  </div>
+  <div class="container">
+  <script>
+
+    $(document).ready(function(){
+        $('#logout').click(function(){
+            window.location.href = "/foods/home/";
+        });
+    });
+
+</script>
+  <center><font color="green"><p><b>Thank You So Much For Choosing...</b></p></font></center>
+  <center><font color="red"><p><b>Food Gawker..!!</b></p></font></center>
+  <center><font color="red"><p><b>Your Food Will Be Delivered By Our Delivery Agent Within A Short Period Of Time..!! Keep Tracking..!</b></p></font></center>
+  <center><img src="/static/track.jpg/" class="w3-round w3-image w3-opacity-min" alt="food_gawker.jpg" width="300" height="450"></center>
+  <center><font color="blue"><p><b>Enjoy Your Food..!!</b></p></font></center>
+{% endblock %}
+</div>
+</body>
+</html>

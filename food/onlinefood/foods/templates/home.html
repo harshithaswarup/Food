@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  {% block content %}
+  <div class="w3-top">
+  <div class="w3-bar w3-black w3-padding">
+    
+    <a href="#home" class="w3-bar-item w3-button"><b><font size="7">&#8498;&#8370;&#9832;</font></b></a>
+    <div class="w3-right w3-hide-small">
+      <a href="/login/" class="w3-bar-item w3-button">Sign In</a>
+      <a href="/signin/" class="w3-bar-item w3-button">Sign Up</a>
+      <a href="" class="w3-bar-item w3-button">About Us</a>
+    </div>
+  </div>
+</div>
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/templates/food_gawker.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity"></div>
+</header>
+<div class="w3-content" style="max-width:1100px">
+
+  
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/static/food.png/" class="w3-round w3-image w3-opacity-min" alt="food_gawker.jpg" width="300" height="450">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center"><b>Food Gawker</b></h1><br>
+      <h5 class="w3-center"><b>One Of The Leading Food Ordering App..</b></h5>
+        <center><p>Online food ordering is the process of food delivery or takeout from a local restaurant or food cooperative through a web page or app. Much like ordering consumer goods online, many of these services allow customers to keep accounts with them in order to make frequent ordering convenient. A customer will search for a favorite restaurant, usually filtered via type of cuisine and choose from available items, and choose delivery or pick-up. Payment can be amongst others either by credit card, cash, with the restaurant returning a percentage to the online food company. </p></center>
+      <center><p><font color="blue"><b>Bored To Cook..?? Never Worry..!</b></font></p></center>
+    </div>
+</div>
+
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1><b>Why Are We Special..??</b></h1>
+    <div class="row">
+    <div class="column">
+      <p><b>Super Fast Food Delivery..!</b></p>
+    <img src="/static/track.jpg/" class="w3-round w3-image w3-opacity-min" alt="food_gawker.jpg" width="300" height="450">
+  </div>
+  <div class="column">
+    <p><b>On Time Food Delivery..!</b></p>
+    <img src="/static/clock.jpg/" class="w3-round w3-image w3-opacity-min" alt="food_gawker.jpg" width="200" height="250">
+  </div>
+  <div class="column">
+    <p><b>Live Order Tracking..!</b></p>
+    <img src="/static/live_order.jpg/" class="w3-round w3-image w3-opacity-min" alt="food_gawker.jpg" width="200" height="250">
+  </div>
+</div>
+<footer class="w3-center w3-black w3-padding-70">
+  <center><p>&#9642; Chennai &#9642; Banglore &#9642; Hyderabad</p></center>
+</footer>
+  {% endblock %}
+</body>
+</html>

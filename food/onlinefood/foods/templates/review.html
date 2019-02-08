@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+  {% block content %}
+  <div class="navbar">
+    <a href="/home/">Home</a>
+  </div>
+<div class="container">
+  <form action="" method="POST">
+    <center>
+    <p><b>Your Food Will Be Delivered Within A Short Period Of Time..</b></p>
+    <p><b>Please Do Fill In The Review Form</b></p>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-save">Submit</button>
+  </center>
+  </form>
+  {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static %}
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  {% block content %}
+  <div class="w3-sidebar w3-black w3-bar-block" style="width:25%">
+    <a href=""><p><b><font size="7">&#8498;&#8370;&#9832;</font></b></p></a>
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="w3-bar-item w3-button">&#9889;Offers<span class="w3-badge w3-green">6</span></a>
+  <a href="" class="w3-bar-item w3-button">&#10032;Most Recommended</a>
+  <a href="" class="w3-bar-item w3-button">&#9889;&#9889;Fast Delivery</a>
+  <a href="" class="w3-bar-item w3-button">&#9719;Express Delivery</a>
+  <a href="#" class="w3-bar-item w3-button">&#9881;Help</a>
+  <a href="" class="w3-bar-item w3-button">&#10070;Terms and Conditions</a>
+</div>
+
+<div style="margin-left:25%">
+  <div class="w3-container w3-teal">
+</div>
+  <div class="navbar">
+    <a href="/home/">Home</a>
+    <a href="/status/"><p>&#9832;Cart</p></a>
+    <!-- <a href="food/(?P<id>\d+)/$">Back</a> -->
+  </div>
+  <script>
+
+    $(document).ready(function(){
+        $('#food').click(function(){
+            window.location.href = "/foods/food/";
+        });
+    });
+</script>
+<script>
+
+    $(document).ready(function(){
+        $('#continue').click(function(){
+            window.location.href = "/foods/shipping/";
+        });
+    });
+</script>
+  <form action="" method="POST">
+      {% csrf_token %}
+      <p><b><marquee>Your Item Has Been Added To The Cart</marquee></b></p>
+      <center><p><b><a href="food/(?P<id>\d+)/$">To Add More Items...Click To View The Menu..</a></b></p></center>
+    </form>
+    <center>
+    <div class="submit-button">
+      <input type="submit" id="food" name="submit" value="View Menu" onclick="displayfood()">
+    </div>
+  </center>
+  </center>
+  <center><p><b>Or</b></p></center>
+  <center>
+    <div class="submit-button">
+      <input type="submit" id="continue" name="submit" value="Continue" onclick="shipping()">
+    </div>
+  </center>
+{% endblock %}
+</div>
+</body>
+</html>
